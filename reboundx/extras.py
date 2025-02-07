@@ -205,6 +205,10 @@ class Extras(Structure):
     def central_force_potential(self):
         clibreboundx.rebx_central_force_potential.restype = c_double
         return clibreboundx.rebx_central_force_potential(byref(self))
+        
+    def quad_force_potential(self):
+        clibreboundx.rebx_quad_force_potential.restype = c_double
+        return clibreboundx.rebx_quad_force_potential(byref(self))
 
     def gravitational_harmonics_potential(self):
         clibreboundx.rebx_gravitational_harmonics_potential.restype = c_double
